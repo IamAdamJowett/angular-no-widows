@@ -4,9 +4,9 @@
     'use strict';
 
     angular.module('angular-no-widows', [])
-        .directive('noWidow', ['$timeout', '$interpolate', noWidow]);
+        .directive('noWidows', ['$timeout', '$interpolate', noWidows]);
 
-    function noWidow($timeout, $interpolate) {
+    function noWidows($timeout, $interpolate) {
         return {
             restrict: 'A',
             replace: true,
