@@ -1,9 +1,8 @@
-/* global angular */
-
 (function() {
     'use strict';
 
-    angular.module('angular-no-widows', [])
+    angular
+        .module('angular-no-widows', [])
         .directive('noWidows', ['$timeout', '$interpolate', noWidows]);
 
     function noWidows($timeout, $interpolate) {
@@ -16,8 +15,6 @@
                         var txt = newVal,
                             tag = elem[0].nodeName.toLowerCase(),
                             wordArray = txt.split(" ");
-
-                        console.log(elem.classNames);
 
                         if (wordArray.length > 1) {
                             wordArray[wordArray.length - 2] += "&nbsp;" + wordArray[wordArray.length - 1];
